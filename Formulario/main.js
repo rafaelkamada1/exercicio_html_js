@@ -5,13 +5,13 @@ const valido = document.getElementById('formulariovalido')
 const invalido = document.getElementById('formularionao valido')
 
 function validaNumero(campoA, campoB) {
-    return campoB > campoA
+    return parseFloat(campoB) > parseFloat(campoA)
 }
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
 
-    let validarForm = validaNumero(campoA.valueasNumber, campoB.valueasNumber)
+    let validarForm = validaNumero(campoA.value, campoB.value)
     if(validarForm) {
         alert('O formulário é válido!')
     } else {
